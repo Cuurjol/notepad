@@ -1,6 +1,6 @@
 class Memo < Post
   def read_from_console
-    puts('Новая заметка (всё, что пишите до строчки "end"):')
+    puts(I18n.t('memo.new'))
 
     line = nil
     @text = []
@@ -14,7 +14,7 @@ class Memo < Post
   end
 
   def to_strings
-    time_string = "Создано: #{@created_at.strftime("%Y.%m.%d, %H:%M:%S")} \n"
+    time_string = "#{I18n.t('memo.created', created_at: @created_at.strftime('%Y.%m.%d, %H:%M:%S'))} \n"
     @text.unshift(time_string)
   end
 

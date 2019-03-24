@@ -2,19 +2,19 @@ class Link < Post
   def initialize
     super
 
-    @url = ""
+    @url = ''
   end
 
   def read_from_console
-    puts("Адрес ссылки:")
+    puts(I18n.t('link.url'))
     @url = STDIN.gets.chomp
 
-    puts("Что за ссылка?")
+    puts(I18n.t('link.description'))
     @text = STDIN.gets.chomp
   end
 
   def to_strings
-    time_string = "Создано: #{@created_at.strftime("%Y.%m.%d, %H:%M:%S")} \n"
+    time_string = "#{I18n.t('link.created', created_at: @created_at.strftime('%Y.%m.%d, %H:%M:%S'))} \n"
     [@url, @text, time_string]
   end
 

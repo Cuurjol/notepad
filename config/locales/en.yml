@@ -1,0 +1,31 @@
+en:
+  read:
+    option_parser:
+      banner: 'Usage: read.rb [options]'
+      help: 'Available options'
+      type: 'what type of posts to show (by default any)'
+      id: 'if id is specified - shows in detail only this post'
+      number: 'how many last posts to show (by default all)'
+    record:
+      found: 'Record %{record}, id = %{id}'
+      not_found: 'Record with id = %{id} does not exist in the DB!'
+    results_table: 'Results table:'
+  new_post:
+    greeting: 'Hello, I am your notebook!'
+    question: 'What do you want to write in a notepad?'
+    created_record: 'Record was saved in the DB, id = %{rowid}'
+  link:
+    url: 'Link address:'
+    description: 'What is the link?'
+    created: 'Created: %{created_at}'
+  memo:
+    new: 'New note (all that you write before the line "end"):'
+    created: 'Created: %{created_at}'
+  task:
+    description: 'What need to do?'
+    date: 'What is the date? Specify the date in the format YYYY.MM.DD, for example 2007.05.12'
+    created: 'Created: %{created_at}'
+    deadline: 'Deadline: %{due_date}'
+  languages:
+    en: "English"
+    ru: "Русский"
